@@ -1,0 +1,19 @@
+{
+  "name": "regns",
+  "version": "1.0.0",
+  "description": "Browser loader based on namespaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkauso/regns.git"
+  },
+  "author": "hkau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hkauso/regns/issues"
+  },
+  "homepage": "https://github.com/hkauso/regns#readme"
+}
