@@ -1,7 +1,10 @@
 //! Namespace Loader
 //! https://github.com/hkauso/regns
 
-globalThis.ns_config = globalThis.ns_config || { root: "/static/js/ns/" };
+globalThis.ns_config = globalThis.ns_config || {
+    root: "/static/js/ns/",
+    version: 0,
+};
 globalThis._app_base = globalThis._app_base || { ns_store: {} };
 
 /// Query an existing namespace
@@ -117,9 +120,11 @@ globalThis.use = (id, callback) => {
 
     // create script to load
     const script = document.createElement("script");
-    script.src = `${globalThis.ns_config.root}${id}.js`;
+    script.src = `${globalThis.ns_config.root}${id}.js?v=${globalThis.ns_config.version}`;
     document.head.appendChild(script);
+
     script.setAttribute("data-registered", new Date().toISOString());
+    script.setAttribute("data-version", globalThis.ns_config.version);
 
     // run callback once the script loads
     script.addEventListener("load", () => {
