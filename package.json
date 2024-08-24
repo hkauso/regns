@@ -1,6 +1,6 @@
 {
   "name": "regns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browser loader based on namespaces",
   "main": "index.js",
   "scripts": {
